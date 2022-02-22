@@ -70,11 +70,13 @@ module file and copying chunks of it out to separate files.
 
 The final layout was like this:
 
-- IT Module File Header
-- Message (not present, not reconstructed, left zeroed out)
-- Patterns
-- Sample Headers
-- Sample Data Blobs
+| Object                 | Start position | Size (bytes) | Origin                                             |
+|------------------------|----------------|--------------|----------------------------------------------------|
+| IT module file header  | 0x00000000     | 0x00000420   | PDB record 0                                       |
+| IT module file message | 0x00000420     | 0x0000002e   | Not present and not reconstructed, left zeroed out |
+| Sample headers         | 0x00000450     | 0x00000af0   | First 0x50 bytes of PDB records 4 to 38            |
+| Patterns               | 0x00000f40     | 0x0001e689   | PDB records 1, 2, 3 concatenated                   |
+| Sample PCM data blobs  | 0x0001f5c9     | 0x00046531   | All but first 0x50 bytes of PDB records 4 to 38    |
 
 The next problem was figuring out how the game got a bunch of
 different tracks - one per level at least - out of this single module
