@@ -8,6 +8,7 @@ import more_itertools as mit
 import dataclasses
 from typing import List
 
+
 def null_terminated_string(b: bytes) -> str:
     return bytes(it.takewhile(lambda e: e, b)).decode("UTF-8")
 
@@ -207,7 +208,6 @@ def bytes_to_it_sample_header(b: bytes) -> ItSampleHeader:
     return ItSampleHeader(*fields)
 
 
-
 with open("Mazera-music.pdb", "rb") as f:
     pdb_data = f.read()
 
@@ -230,9 +230,11 @@ for [rh, rh_next] in mit.windowed(it.chain(pdb_record_headers, [None]), 2):
 
 project_data = io.BytesIO()
 
+
 def get_record_data(idx) -> bytes:
     rh = pdb_record_headers[idx]
     return pdb_data[rh.offset : rh.end]
+
 
 it_project_header_bytes = get_record_data(0)
 
