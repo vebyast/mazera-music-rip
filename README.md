@@ -7,6 +7,9 @@ overview of the reverse-engineering process, in case it helps anyone
 else rip the music out of their ancient Palm game with lost source
 code.
 
+The rendered files can be found [on google
+drive](https://drive.google.com/drive/folders/104vJNP3I7zgo-u6dxJ4jstILRg5flWkk?usp=sharing).
+
 ## Process
 
 PalmOS packages are shipped in [the PDB container
