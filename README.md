@@ -134,3 +134,13 @@ objects into the structured `dataclass`es. I then use a `BytesIO`
 object so I can easily write bytes into the appropriate places. It's
 not the cleanest code and it'll only work on this game, but I kept it
 as simple as I could within those constraints.
+
+## TODO
+
+Figure out if there are any extra tracks hiding in the introductions
+to the level themes. For example, the music for level 2 ends at
+position 65. The music for level 3 could start at position 66, play to
+position 95, and loop back to position 76 before continuing: 66 -> 95
+-> 76 -> 95 -> 76 -> …. Or, counterfactually, positions 66 through 72 could
+belong to the music for a cutscene and the music for level 3 would
+then go 72 -> 95 -> 76 -> 95 -> 76 -> ….
