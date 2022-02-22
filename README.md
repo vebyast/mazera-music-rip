@@ -93,64 +93,35 @@ a little bit of poking at OpenMPT.
 
 Provided by [SuperKimVT](https://www.twitch.tv/superkimvt).
 
-Level 1: Master Computer
-Level 2: Desert
-Level 3: Forest
-Level 4: Mountains
-Level 5: Worm
-Level 6: Fin
-Level 7: Mazerian City
+- Level 1: Master Computer
+- Level 2: Desert
+- Level 3: Forest
+- Level 4: Mountains
+- Level 5: Worm
+- Level 6: Fin
+- Level 7: Mazerian City
 
 ## Looping
 
-pattern 11 -> position 6
-pattern 32 -> position 13
-pattern 53 -> position 39
-pattern 76 -> position 70
-pattern 91 -> position 96
-pattern 109 -> position 117
-pattern 118 -> position 146
-pattern 138 -> position 147
+- pattern 11 -> position 6
+- pattern 32 -> position 13
+- pattern 53 -> position 39
+- pattern 76 -> position 70
+- pattern 91 -> position 96
+- pattern 109 -> position 117
+- pattern 118 -> position 146
+- pattern 138 -> position 147
 
-### Title
-
-starts at position 0 (0x00)
-loops from position 11 (pattern 11) to position 6
-
-### 1
-
-starts at position 12 (0x0c)
-loops from position 36 (pattern 32) to position 13
-
-### 2
-
-starts at position 37 (0x25)
-loops from position 65 (pattern 53) to position 39
-
-### 3
-
-starts at position 66 (0x42)
-loops from position 95 (pattern 76) to position 70
-
-### 4
-
-starts at position 96 (0x60)
-loops from position 115 (pattern 91) to position 96
-
-### 5
-
-starts at position 116 (0x74)
-loops from position 135 (pattern 109) to position 117
-
-### 6
-
-starts at position 136 (0x88)
-loops from position 146 (pattern 118) to position 146
-(does _not_ loop)
-
-### 7
-starts at position 147 (0x93)
-loops from position 166 (pattern 138) to position 147
+| Track | Start position | (hex) | Loop origin position | Loop Pattern | Loop target position | Notes           |
+|-------|----------------|-------|----------------------|--------------|----------------------|-----------------|
+| Title | 0              | 0x00  | 11                   | 11           | 6                    |                 |
+| 1     | 12             | 0x0c  | 36                   | 32           | 13                   |                 |
+| 2     | 37             | 0x25  | 65                   | 53           | 39                   |                 |
+| 3     | 66             | 0x42  | 95                   | 76           | 70                   |                 |
+| 4     | 96             | 0x60  | 115                  | 91           | 96                   |                 |
+| 5     | 116            | 0x74  | 135                  | 91           | 96                   |                 |
+| 6     | 136            | 0x88  | 146                  | 118          | 146                  | does *not* loop |
+| 7     | 147            | 0x93  | 166                  | 138          | 147                  |                 |
 
 ## Code
 
